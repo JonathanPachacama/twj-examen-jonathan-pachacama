@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+
+      <img  class="img-cabecera" src="https://imageresizer.static9.net.au/oD3i39eKBS6V7z95VtdnxCYxKnY=/1920x0/https%3A%2F%2Fs3-ap-southeast-2.amazonaws.com%2Fvms-tv-images-prod%2F2017%2F04%2F67895%2FPOKE_Pokemon_1920.jpg" alt="">
+
+    </div>
+  </div>
+
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let poke of pokemons;let indice = index;">
+      <div class="card" >
+        <img class="card-img-top"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="Card image cap">
+
+          <app-pokemon [pokemon]="poke"></app-pokemon>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+

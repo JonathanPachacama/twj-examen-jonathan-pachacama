@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+
+      <img  class="img-cabecera" src="https://www.codejobs.biz/public/images/blog/original/4e195de8b66c994.gif" alt="">
+      <H1>Examen JavaScript</H1>
+      <h2>MATERIAS</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let materia of materias;let indice = index;">
+      <div class="card" >
+        <img class="card-img-top"  src="http://conceptodefinicion.de/wp-content/uploads/2016/04/Asignaturas.jpg" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">{{materia.NombreMateria}}</h4>
+          <h6 align="left">Topico de la materia: {{materia.TopicoMateria}}</h6>
+          <h6 align="left">Fecha de Creacion: {{materia.FechaCreacion}}</h6>
+          <h6 align="left">{{materia.createdAt}}</h6>
+          <h6 align="left">{{materia.updatedAt}}</h6>
+          <a href="#" class="btn btn-primary" (click)="eliminarMateria(materia,indice)" >Eliminar Materia</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+          <div class="cardNuevaMateria">
+          <div class="card-header">Ingrese una Nueva Materia</div>
+          <div class="card-block">
+              <h4>Datos de la Nueva materia</h4>
+              <div style="width: auto" class="from-group">
+                <input class="from-control"
+                   placeholder="Nombre de la materia"
+                   [(ngModel)]="nuevaMateria.NombreMateria" type="text">
+              </div>
+              <br>
+              <div class="from-group">
+                <input class="from-control"
+                   placeholder="Topico de la materia"
+                   [(ngModel)]="nuevaMateria.TopicoMateria" type="text">
+              </div>
+              <br>
+              <div class="from-group">
+                <input class="from-control"
+                   placeholder="fecha de creacion"
+                   [(ngModel)]="nuevaMateria.FechaCreacion" type="text">
+              </div>
+              <br>
+            <button class="btn btn-warning" (click)="crearMateria()">Guardar Materia</button>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+</div>
