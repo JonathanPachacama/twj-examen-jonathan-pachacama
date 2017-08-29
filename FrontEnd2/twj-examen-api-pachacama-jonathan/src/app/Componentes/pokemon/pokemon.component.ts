@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Http} from "@angular/http";
 import 'rxjs/add/operator/map';
 import {pokemonInterface} from "../../Interfaces/pokemonInterface";
 
@@ -11,7 +10,7 @@ import {pokemonInterface} from "../../Interfaces/pokemonInterface";
 export class PokemonComponent implements OnInit {
 
 
-  @Input() pokemon:pokemonInterface;
+  @Input() pokemons:pokemonInterface;
   constructor() { }
 
   ngOnInit()

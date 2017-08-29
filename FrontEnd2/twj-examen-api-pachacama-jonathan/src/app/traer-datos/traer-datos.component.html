@@ -1,0 +1,39 @@
+<div class="container" style="background-color: black">
+  <div class="cabecera" style="position: relative">
+    <!-- 1 fila-->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="bg" id ="main-creative" >
+          <br>
+          <br>
+
+        </div>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+  <br>
+  <h1>Datos desde Node-Red</h1>
+  <div class="container">
+    <div class="row">
+      <br>
+      <br>
+      <div  class="col-md-4" *ngFor="let movimiento of movimientos;let indice = index;">
+        <br>
+        <br>
+        <div class="card" style="width: 20rem; height: 45rem">
+
+          <div class="card-block">
+            <h4  class="card-title">Movimiento</h4>
+            <p><strong>nombre: </strong> {{movimiento.name}}</p>
+            <p><strong>url: </strong> {{movimiento.name}}</p>
+            <br>
+            <button  class="btn btn-danger" (click)="eliminarMovimientoNodeBackend(movimiento,movimiento._id);eliminarMovimientoFrontEnd($event)">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
